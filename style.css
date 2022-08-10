@@ -38,7 +38,7 @@ body {
     display: flex;
     flex-wrap:wrap;
     width: 360px;
-    height: max-content;
+    height: 480px;
     flex-direction: row-reverse;
     justify-content: start;
 }
@@ -47,14 +47,8 @@ body {
     display: flex;
     flex-wrap:wrap;
     width: 120px;
-    height: 500px;
     height: max-content;
     justify-content: end;
-}
-
-.equelBtn {
-    width: 120px;
-    height: 120px;
 }
 
 .block, .blockFunc, .equelBtn {
@@ -74,4 +68,43 @@ body {
 .blockFunc, .equelBtn {
     background-color: rgb(59, 10, 10);
     color: #fff;
+}
+
+@media screen and (max-width: 850px) {
+    .block, .blockFunc, .equelBtn {
+        height: 58px;
+        flex-basis: 58px;
+        font-size: 18px;
+        border-width: 1px;
+    }
+
+    .numberBox {
+        width: 180px;
+        height: 240px;
+    }
+
+    .functionBox {
+        width: 60px;
+        height: max-content;
+    }
+
+    .textBox {
+        height: 63px;
+        width: 228px;
+        font-size: 18px;
+        border-width: 1px;
+        padding: 5px;
+    }
+
+    .calcBody {
+        height: 315px;
+        width: 240px;
+        padding: 1px;
+        border-width: 1px;
+    }
+
+    .buttons {
+        height: 240px;
+        width: 240px;
+    }
 }
