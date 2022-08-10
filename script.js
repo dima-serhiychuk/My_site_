@@ -64,7 +64,7 @@ function doTheFunc (eaquelNum) {
         secondNum = Number(secondNum);
 
         number = document.querySelector('.textBox');
-        number.style.color = "rgb(109, 60, 60)";
+        number.style.color = "rgb(255, 80, 80)";
 
         if (funcChar === "*") {
             result = firstNum * secondNum;
