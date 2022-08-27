@@ -4,34 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Calculator</title>
+
+    <title>Document</title>
 </head>
 <body>
-    <div class="calcBody">
-        <div class="textBox"></div>
-        <div class="buttons">
-            <div class="numberBox">
-                <div class="block" id="num9" onclick="setNumber('9')">9</div>
-                <div class="block" id="num8" onclick="setNumber('8')">8</div>
-                <div class="block" id="num7" onclick="setNumber('7')">7</div>
-                <div class="block" id="num6" onclick="setNumber('6')">6</div>
-                <div class="block" id="num5" onclick="setNumber('5')">5</div>
-                <div class="block" id="num4" onclick="setNumber('4')">4</div>
-                <div class="block" id="num3" onclick="setNumber('3')">3</div>
-                <div class="block" id="num2" onclick="setNumber('2')">2</div>
-                <div class="block" id="num1" onclick="setNumber('1')">1</div>
-                <div class="equelBtn" onclick="doTheFunc(true)">=</div> 
-                <div class="block" id="num00" onclick="setNumber('00')">00</div>
-                <div class="block" id="num0" onclick="setNumber('0')">0</div>
-            </div>   
-            <div class="functionBox">
-                <div class="blockFunc" onclick="setFunc('*')">*</div>
-                <div class="blockFunc" onclick="setFunc('/')">/</div>
-                <div class="blockFunc" onclick="setFunc('+')">+</div>
-                <div class="blockFunc" onclick="setFunc('-')">-</div>
-            </div> 
-        </div>    
-    </div>
+    <div id="changer" onclick="changeTheame()"></div>
+    <div class="main">
+        <input type="text" id="inp" onchange="setVal()">
+    </div>  
+    <div class="numberC"></div> 
 </body>
+<script src="script.js"></script>
 </html>

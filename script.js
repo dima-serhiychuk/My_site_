@@ -1,87 +1,24 @@
-var number;
-var ifFuncEvaible = false
-var firstNum = null;
-var secondNum = null;
-var result = null;
+var isChangerOn = false;
+var mainBlock = document.querySelector('.main');
 
-function setNumber(num) {  
-    
-    if (ifFuncEvaible === false) {
-        if (result !== null) {
-            number = document.querySelector('.textBox') 
-            number.style.color = "#fff";
-            number.innerText = null;
-            number.innerText += num;
-            firstNum = number.innerText;
-            console.log(firstNum + ' FIRST')   
-            result = null;
-        }
-        else {
-            number = document.querySelector('.textBox') 
-            number.innerText += num;
-            firstNum = number.innerText;
-            console.log(firstNum + ' FIRST')   
-        }
-        
-    }
-
+function changeTheame () {
+    if (isChangerOn === false) {
+        mainBlock.style.background = 
+        " linear-gradient(90deg, rgb(96, 196, 56), rgb(57, 117, 49))"
+        isChangerOn = true
+    }  
     else {
-        if (secondNum === null) {
-            number.innerText = null;
-            number.innerText += num;
-            secondNum = number.innerText
-            console.log(firstNum)
-            console.log(secondNum + ' SECOND')
-        }
-        else {
-            number.innerText += num;
-            secondNum = number.innerText
-            console.log(firstNum)
-            console.log(secondNum + ' SECOND')
-        }
-    }
-    
+        mainBlock.style.background =
+        "linear-gradient(90deg, rgb(76,76,185), rgb(76, 145, 185))"
+        isChangerOn = false
+    }   
 }
 
-var funcChar
+document.cookie = ("ddsdsd");
 
-function setFunc (func) {
-
-    if (firstNum !== null && secondNum === null) {
-        number.innerText = func;
-        funcChar = number.innerText;
-        console.log(funcChar);
-        ifFuncEvaible = true
-    }
-    
-}
-
-var eaquelNum = false;
-
-function doTheFunc (eaquelNum) {
-    if (eaquelNum === true && firstNum !== null & secondNum !== null) {
-        firstNum = Number(firstNum);
-        secondNum = Number(secondNum);
-
-        number = document.querySelector('.textBox');
-        number.style.color = "rgb(255, 80, 80)";
-
-        if (funcChar === "*") {
-            result = firstNum * secondNum;
-        }
-        else if (funcChar === "/") {
-            result = firstNum / secondNum;
-        }
-        else if (funcChar === "+") {
-            result = firstNum + secondNum;
-        }
-        else if (funcChar === "-") {
-            result = firstNum - secondNum;
-        }
-        console.log(result)
-        number.innerText = result;
-        ifFuncEvaible = false;
-        secondNum = null;
-        firstNum = null;
-    }
+function setVal() {
+    var cookieValue = document.getElementById('inp').value;
+    document.querySelector('.numberC').innerText = cookieValue;
+    document.cookie = encodeURIComponent(cookieValue);
+    alert(document.cookie);
 }

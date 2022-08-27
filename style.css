@@ -1,110 +1,65 @@
-body {
-    margin: 0;
-}
-
-.calcBody {
-    height: 630px;
-    width: 480px;
-    border-color: rgba(0,0,0,0.2);
-    border-width: 1px;
-    border-style: solid;
-    margin: 150px auto 0 auto;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
-    padding: 1px;
-}
-
-.textBox {
-    background-color: rgb(65, 65, 65);
-    color: #fff;
-    font-size: 50px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(0,0,0,0.2);
-    height: 128px;
-    width: 458px;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding: 10px;
-}
-
-.buttons {
-    display: flex;
-    flex-direction: row;
-}
-
-.numberBox {
-    display: flex;
-    flex-wrap:wrap;
-    width: 360px;
-    height: 480px;
-    flex-direction: row-reverse;
-    justify-content: start;
-}
-
-.functionBox {
-    display: flex;
-    flex-wrap:wrap;
-    width: 120px;
-    height: max-content;
-    justify-content: end;
-}
-
-.block, .blockFunc, .equelBtn {
-    background-color: #fff;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.2);
-    height: 118px;
-    flex-basis: 118px;
+.main {
+    width: 250px;
+    height: 80px;
+    margin: 200px auto 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgb(76,76,185), rgb(76, 145, 185));
+    box-shadow: 0 2px 15px 15px rgba(0,0,0,0.2),
+     0 2px 10px 5px rgba(0,0,0,0.2);
 }
 
-.blockFunc, .equelBtn {
-    background-color: rgb(59, 10, 10);
+.numberC {
+    min-width: 200px;
+    min-height: 40px;
+    width: max-content;
+    height: max-content;
+    border-radius: 15px;
+    background-color: rgb(163, 163, 163);
+    box-shadow: 0 2px 15px 20px rgba(0,0,0,0.2),
+     0 2px 8px 8px rgba(0,0,0,0.2);
+     margin: 100px auto 0 auto;
+     font-size: 20px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 10px;
+}
+
+#inp {
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+p {
+    margin: 0;
+    font-size: 25px;
     color: #fff;
 }
 
-@media screen and (max-width: 850px) {
-    .block, .blockFunc, .equelBtn {
-        height: 58px;
-        flex-basis: 58px;
-        font-size: 18px;
-        border-width: 1px;
-    }
+#changer {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: linear-gradient(rgb(96, 196, 56), rgb(57, 117, 49));
+    cursor: pointer;
+    margin: 25px;
+    overflow: hidden;
+}
 
-    .numberBox {
-        width: 180px;
-        height: 240px;
-    }
-
-    .functionBox {
-        width: 60px;
-        height: max-content;
-    }
-
-    .textBox {
-        height: 63px;
-        width: 228px;
-        font-size: 18px;
-        border-width: 1px;
-        padding: 5px;
-    }
-
-    .calcBody {
-        height: 315px;
-        width: 240px;
-        padding: 1px;
-        border-width: 1px;
-    }
-
-    .buttons {
-        height: 240px;
-        width: 240px;
-    }
+#changer::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    margin-left: 10.25px;
+    margin-top: 10.25px;
+    background: linear-gradient(rgb(76,76,185), rgb(76, 145, 185));
+    transform: rotate(45deg);
+    display: block;
 }
