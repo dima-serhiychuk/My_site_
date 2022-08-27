@@ -1,6 +1,8 @@
 var isChangerOn = false;
 var mainBlock = document.querySelector('.main');
 
+document.querySelector('.numberC').innerText = document.cookie(cookieValue);
+
 function changeTheame () {
     if (isChangerOn === false) {
         mainBlock.style.background = 
@@ -18,7 +20,6 @@ document.cookie = ("ddsdsd");
 
 function setVal() {
     var cookieValue = document.getElementById('inp').value;
-    document.querySelector('.numberC').innerText = cookieValue;
     document.cookie = encodeURIComponent(cookieValue);
-    alert(document.cookie);
+    alert(document.cookie);  
 }
