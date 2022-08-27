@@ -1,6 +1,7 @@
 var isChangerOn = false;
 var mainBlock = document.querySelector('.main');
 
+var cookieValue;
 document.querySelector('.numberC').innerText = document.cookie(cookieValue);
 
 function changeTheame () {
@@ -16,10 +17,8 @@ function changeTheame () {
     }   
 }
 
-document.cookie = ("ddsdsd");
-
 function setVal() {
-    var cookieValue = document.getElementById('inp').value;
+    cookieValue = document.getElementById('inp').value;
     document.cookie = encodeURIComponent(cookieValue);
     alert(document.cookie);  
 }
