@@ -15,12 +15,12 @@ function changeTheame () {
 }
 
 var result;
+document.querySelector('.numberC').innerText = result;
 
 function setVal() {
     var cookieValue = document.getElementById('inp').value;
     document.cookie = encodeURIComponent(cookieValue);
     alert(document.cookie);  
-    result = decodeURIComponent(cookieValue);
+    return result = decodeURIComponent(cookieValue);
 }
 
-document.querySelector('.numberC').innerText = result;
