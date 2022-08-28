@@ -14,13 +14,11 @@ function changeTheame () {
     }   
 }
 
-var result;
-document.querySelector('.numberC').innerText = result;
 
 function setVal() {
     var cookieValue = document.getElementById('inp').value;
     document.cookie = encodeURIComponent(cookieValue);
-    alert(document.cookie);  
-    return result = decodeURIComponent(cookieValue);
+    alert(document.cookie);
+    document.querySelector('.numberC').innerText = decodeURIComponent(cookieValue);
 }
 
