@@ -14,10 +14,11 @@ function changeTheame () {
     }   
 }
 
-document.querySelector('.numberC').innerText = decodeURIComponent(cookieValue);
+var cookieValue = decodeURIComponent(cookieValue);
+document.querySelector('.numberC').innerText = cookieValue;
 
 function setVal() {
-    var cookieValue = document.getElementById('inp').value;
+    cookieValue = document.getElementById('inp').value;
     document.cookie = encodeURIComponent(cookieValue);
     alert(document.cookie);
     document.querySelector('.numberC').innerText = decodeURIComponent(cookieValue);
