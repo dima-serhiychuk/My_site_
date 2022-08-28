@@ -14,7 +14,7 @@ function changeTheame () {
     }   
 }
 
-var cookieValue = decodeURIComponent(cookieValue);
+var cookieValue = document.cookie;
 document.querySelector('.numberC').innerText = cookieValue;
 
 function setVal() {
