@@ -14,7 +14,7 @@ function changeTheame () {
     }   
 }
 
-if (document.cookie !== none) {
+if (document.cookie !== null) {
     document.querySelector('.numberC').innerText = document.cookie;
 }
 else {
