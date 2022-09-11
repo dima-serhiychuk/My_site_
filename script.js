@@ -14,12 +14,16 @@ function changeTheame () {
     }   
 }
 
-var cookieValue = document.cookie;
-document.querySelector('.numberC').innerText = cookieValue;
+if (document.cookie !== none) {
+    document.querySelector('.numberC').innerText = document.cookie;
+}
+else {
+    document.querySelector('.numberC').innerHTML = none;
+}
 
 function setVal() {
     cookieValue = document.getElementById('inp').value;
     document.cookie = encodeURIComponent(cookieValue);
     alert(document.cookie);
-    document.querySelector('.numberC').innerText = decodeURIComponent(cookieValue);
+    // document.querySelector('.numberC').innerText = decodeURIComponent(cookieValue);
 }
