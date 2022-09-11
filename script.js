@@ -15,6 +15,12 @@ function changeTheame () {
 }
 
 if (document.cookie !== null) {
+    var a = document.cookie.split('; ').reduce((prev, current) => {
+        const [name, ...value] = current.split('=');
+        prev[name] = value.join('=');
+        return prev;
+      }, {});
+      console.log(a);
     document.querySelector('.numberC').innerText = document.cookie(text.value);
     document.querySelector('.numberC1').innerText = document.cookie(text1.value);
 }
