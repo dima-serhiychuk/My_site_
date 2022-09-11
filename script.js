@@ -21,8 +21,8 @@ if (document.cookie !== null) {
         return prev;
       }, {});
       console.log(a);
-    document.querySelector('.numberC').innerText = document.cookie(text.value);
-    document.querySelector('.numberC1').innerText = document.cookie(text1.value);
+    document.querySelector('.numberC').innerText = a.text;
+    document.querySelector('.numberC1').innerText = a.text1;
 }
 else {
     document.querySelector('.numberC').innerHTML = null;
