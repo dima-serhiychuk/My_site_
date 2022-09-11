@@ -15,8 +15,8 @@ function changeTheame () {
 }
 
 if (document.cookie !== null) {
-    document.querySelector('.numberC').innerText = decodeURIComponent(text);
-    document.querySelector('.numberC1').innerText = decodeURIComponent(text1);
+    document.querySelector('.numberC').innerText = decodeURIComponent(text.value);
+    document.querySelector('.numberC1').innerText = decodeURIComponent(text1.value);
 }
 else {
     document.querySelector('.numberC').innerHTML = null;
