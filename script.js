@@ -14,16 +14,19 @@ function changeTheame () {
     }   
 }
 
-if (document.cookie !== null) {
-    document.querySelector('.numberC').innerText = document.cookie;
-}
-else {
-    document.querySelector('.numberC').innerHTML = none;
-}
-
 function setVal() {
     var cookieValue = document.getElementById('inp').value;
+    var cookieValue1 = document.getElementById('inp1').value;
     document.cookie = encodeURIComponent(cookieValue);
+    document.cookie = encodeURIComponent(cookieValue1);
     alert(document.cookie);
     document.querySelector('.numberC').innerText = decodeURIComponent(cookieValue);
+}
+
+if (document.cookie !== null) {
+    document.querySelector('.numberC').innerText = decodeURIComponent(cookieValue);
+    document.querySelector('.numberC1').innerText = decodeURIComponent(cookieValue1);
+}
+else {
+    document.querySelector('.numberC').innerHTML = null;
 }
