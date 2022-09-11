@@ -16,7 +16,10 @@ function changeTheame () {
 
 if (document.cookie !== null) {
     var a = document.cookie.split('; ').reduce((prev, current) => {
-        const [name, ...value] = current.split('=');
+        var split_res = current.split('=');
+        var name = split_res[0];
+        var value = split_res[split_res.length - 1];
+
         prev[name] = value.join('=');
         return prev;
       }, {});
