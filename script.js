@@ -8,13 +8,13 @@ var a = document.cookie.split('; ').reduce((prev, current) => {
   }, {});
   console.log(a);
 
-if (a.theme === true) {
+if (a.theme === "true") {
     mainBlock.style.background = 
     " linear-gradient(90deg, rgb(96, 196, 56), rgb(57, 117, 49))"
     isChangerOn = true
     document.cookie = "theme=" + encodeURIComponent(isChangerOn);
 }
-else if (a.theme === false) {
+else if (a.theme === "false") {
     mainBlock.style.background =
     "linear-gradient(90deg, rgb(76,76,185), rgb(76, 145, 185))"
     isChangerOn = false
