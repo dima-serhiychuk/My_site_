@@ -71,6 +71,7 @@ function searchInSliderByText(input) {
 
 function setSlickSlider() {
     $('.destination_items').slick({
+        centerMode: false,
         rows: 2,
         infinite: true,
         speed: 500,
@@ -81,14 +82,15 @@ function setSlickSlider() {
         autoplay: true,
         autoplaySpeed: 5000,
         variableWidth: true,
+        mobileFirst: true,
         responsive: [
             {
-                breakpoint: 1440,
-                settings: {slidesToShow: 2}
+                breakpoint: '1440px',
+                settings: {slidesToShow: 3, slidesToScroll: 1}
             },
             {
-                breakpoint: 768,
-                settings: {rows: 1, prevArrow: null, nextArrow: null}
+                breakpoint: '768px',
+                settings: {slidesToShow: 2, slidesToScroll: 1, rows: 1, prevArrow: null, nextArrow: null}
             }
         ]
     });
