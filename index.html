@@ -2,21 +2,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="assets/style/style.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="changer" onclick="changeTheame()"></div>
-    <div class="main">
-        <input type="text" id="inp" onchange="setVal()">
+
+    <div class="page">
+        
+        <header class="header">
+            <div class="header_top">
+                <div class="header_navigate">
+                    <a class="header_nav_link" href="#">Home</a>
+                    <a class="header_nav_link" href="#">Services</a>
+                    <a class="header_nav_link" href="#">About Us</a>
+                    <a class="header_nav_link" href="#">Our Clients</a>
+                    <a class="header_nav_link" href="#">Blog</a>
+                    <a class="header_nav_link" href="#">Contact Us</a>
+                </div>
+                <div class="header_hotline">
+                    Hotline: +516 260 0598
+                </div>
+            </div>
+            <div class="header_content">
+                <div class="header_content_title">Fusion Travel</div>
+                <div class="header_content_subtitle">Lets Discover The World Together</div>
+                <a class="__button" href="#">Plan Your Trip</a>
+            </div>
+            <div class="header_bottom">
+                <div class="header_video_play"></div>
+                <div class="header_video_text">
+                    <div class="header_video_title">Watch</div>
+                    <div class="header_video_subtitle">intro video</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="welcome">
+            <div class="__text_container">
+                <div class="__text_title">Welcome to Fusion</div>
+                <div class="welcome_subtitle">Nam consectetur elementum neque vitae condimentum. Aenean dignissim, turpis et tincidunt finibus, massa purus malesuada metus, a commodo velit magna nec nibh. Donec dictum fringilla tempus. Nunc rhoncus sapien lectus, non fermentum neque euismod quis. Phasellus sagittis tortor in accumsan </div>
+            </div>
+            <div class="welcome_content">
+                <div class="welcome_item">
+                    <div class="welcome_item_title w_item_icon_1">Best Price Guarantee</div>
+                    <div class="welcome_item_text">SpaceTeam bootstrapping user centered design sticky note convergence fund </div>
+                </div>
+                <div class="welcome_item" id="w_item_select">
+                    <div class="welcome_item_title w_item_icon_2">Best Travel Agency</div>
+                    <div class="welcome_item_text">User story Steve Jobs Stev Jobs iterate human-centered design iterate pair progra ming 360 campaign.</div>
+                </div>
+                <div class="welcome_item">
+                    <div class="welcome_item_title w_item_icon_3">Trust & Safety</div>
+                    <div class="welcome_item_text">Thought leader cortado viral viral earned media long shadow actionable insight</div>
+                </div>
+            </div>
+            <div class="welcome_slider">
+                <div class="welcome_slider_elem_out">
+                    <div class="welcome_slider_elem_in"></div>
+                </div>
+                <div class="welcome_slider_elem_out" id="w_slider_out_select">
+                    <div class="welcome_slider_elem_in" id="w_slider_in_select"></div>
+                </div>
+                <div class="welcome_slider_elem_out">
+                    <div class="welcome_slider_elem_in"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="destination">
+            <div class="__text_container">
+                <div class="__text_title">Find Your Destination</div>
+                <div class="__text_subtitle">Most Popular Places Are Waiting For You</div>
+            </div>
+            <div class="destination_search">
+                <img class="destination_search_img" src="assets/image/destination/search_icon.png" alt="">
+                <textarea class="destination_search_inp" placeholder="Search..." maxlength="15" oninput="searchInSlider()"></textarea>
+            </div>
+            <div class="destination_content">
+                <div class="destination_items">
+                        <div class="destination_item">
+                            <img class="destination_item_img" src="assets/image/destination/Jupiter 1-24C 07.10.22.jpg" alt="">
+                            <p class="destination_item_text">Thailand</p>
+                        </div>
+                        <div class="destination_item">
+                            <img class="destination_item_img" src="https://placehold.co/400x400" alt="">
+                            <p class="destination_item_text">Australia</p>
+                        </div>
+                        <div class="destination_item">
+                            <img class="destination_item_img" src="https://placehold.co/400x400" alt="">
+                            <p class="destination_item_text">Indonesia</p>
+                        </div>
+                        <div class="destination_item">
+                            <img class="destination_item_img" src="https://placehold.co/400x400" alt="">
+                            <p class="destination_item_text">France</p>
+                        </div>
+                        <div class="destination_item">
+                            <img class="destination_item_img" src="assets/image/destination/Jupiter 1-24C 07.10.22.jpg" alt="">
+                            <p class="destination_item_text">Malaysia</p>
+                        </div>
+                        <div class="destination_item">
+                            <img class="destination_item_img" src="assets/image/destination/Jupiter 1-24C 07.10.22.jpg" alt="">
+                            <p class="destination_item_text">Italy</p>
+                        </div>
+                        <div class="destination_item">
+                            <img class="destination_item_img" src="https://placehold.co/400x400" alt="">
+                            <p class="destination_item_text">Japan</p>
+                        </div>
+                        <div class="destination_item">
+                            <img class="destination_item_img" src="https://placehold.co/400x400" alt="">
+                            <p class="destination_item_text">Poland</p>
+                        </div>
+                        <div class="destination_item">
+                            <img class="destination_item_img" src="https://placehold.co/400x400" alt="">
+                            <p class="destination_item_text">Egypt</p>
+                        </div>
+                        <div class="destination_item">
+                            <img class="destination_item_img" src="https://placehold.co/400x400" alt="">
+                            <p class="destination_item_text">Brazil</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div class="main">
-        <input type="text" id="inp1" onchange="setVal()">
-    </div>    
-    <div class="numberC"></div> 
-    <div class="numberC1"></div> 
+    
 </body>
-<script src="script.js"></script>
+<script src="assets/script/script.js"></script>
 </html>
