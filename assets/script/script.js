@@ -29,8 +29,6 @@ $(document).ready(function(){
     $(".destination_search_inp").keypress(function (event) {if(event.keyCode == 13){event.preventDefault()}});
     setSlickSlider();
     setHoverEffect();
-    if (window.innerWidth <= 768) {$(".destination_btn_move").css({"display": "none"})}
-    else {$(".destination_btn_move").css({"display": "block"})}
 });
 
 function searchInSlider() {
@@ -82,6 +80,12 @@ function setSlickSlider() {
         nextArrow: "<div class='destination_btn_move destination_btn_right'></div>",
         autoplay: true,
         autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {slidesToShow: 2, prevArrow: null, nextArrow: null}
+            }
+        ]
     });
 }
 
