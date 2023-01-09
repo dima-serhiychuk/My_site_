@@ -76,14 +76,19 @@ function setSlickSlider() {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        prevArrow: "<div class='destination_btn_move'></div>",
-        nextArrow: "<div class='destination_btn_move destination_btn_right'></div>",
+        prevArrow: $(".destination_btn_move"),
+        nextArrow: $(".destination_btn_move.destination_btn_right"),
         autoplay: true,
         autoplaySpeed: 5000,
+        variableWidth: true,
         responsive: [
             {
+                breakpoint: 1440,
+                settings: {slidesToShow: 2}
+            },
+            {
                 breakpoint: 768,
-                settings: {slidesToShow: 2, prevArrow: null, nextArrow: null}
+                settings: {rows: 1, prevArrow: null, nextArrow: null}
             }
         ]
     });
